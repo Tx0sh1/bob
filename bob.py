@@ -17,6 +17,7 @@ def calculate():
         print(n1 * n2)
     elif op == "division":
         print(n1 / n2)
+        
     else:
         print("Enter only numbers")
 def get_current_time():
