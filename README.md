@@ -7,13 +7,13 @@ Greeting: The program will greet you by asking for your name and welcoming you.
 Time: Get the current time with a simple command.
 Music: Play a specified music file.
 Calculator: Perform basic arithmetic operations.
-Weather: Fetch and display current weather information for a specified city.
-Installation
+
+## Installation
 Prerequisites
 Python 3.x
-Required Python libraries: requests, playsound
+Required Python libraries: pygame
 Install Required Libraries
-You can install the necessary libraries using pip: pip install requests playsound
+You can install the necessary libraries using pip: pip install requests pygame
 
 ## Usage
 Clone the repository or download the source code.
@@ -32,8 +32,6 @@ Time: Type time to get the current time.
 Music: Type music to play the specified music file.
 Calculator: Type calculate to perform basic arithmetic operations.
 The program will prompt you to enter two numbers and the desired operation (add, sub, multiply, division).
-Weather: Type weather to fetch and display the current weather information.
-The program will prompt you to enter the city name.
 Exit: Type exit to close the program.
 
 ## Contributing
