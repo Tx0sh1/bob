@@ -1,9 +1,11 @@
 import datetime
 from music_player import music_player
 from calculator import calculate
+from weather import weather
+from movies import info
 
 def greet_user():
-    name = input("Hello there, What may I call you?: ")
+    name = input("Hello there i am Bob, your personal basic assistant, What may I call you?: ")
     print(f"Welcome to your personal assistant, {name}!")
 
 def get_current_time():
@@ -19,6 +21,10 @@ def main():
             music_player()
         elif command == "calculate":
             calculate()
+        elif command == "movie" or "movies":
+            info()
+        elif command == "weather":
+            weather()
         elif command == "exit":
             break
         else:

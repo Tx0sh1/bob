@@ -7,12 +7,15 @@ Greeting: The program will greet you by asking for your name and welcoming you.
 Time: Get the current time with a simple command.
 Music: Play a specified music file.
 Calculator: Perform basic arithmetic operations.
+Weather: Get current weather conditions for a specified city.
+Movies: Fetch the year and plot of a movie.
 
 ## Installation
 Prerequisites
 Python 3.x
 Required Python libraries: pygame
-Install Required Libraries
+
+### Install Required Libraries
 You can install the necessary libraries using pip: pip install requests pygame
 
 ## Usage
@@ -32,6 +35,8 @@ Time: Type time to get the current time.
 Music: Type music to play the specified music file.
 Calculator: Type calculate to perform basic arithmetic operations.
 The program will prompt you to enter two numbers and the desired operation (add, sub, multiply, division).
+weather: type weather to get the current forcast
+movies: type movies then movie name and get the year and plot (more features will be added)
 Exit: Type exit to close the program.
 
 ## Contributing
