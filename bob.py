@@ -1,9 +1,9 @@
 import datetime
-from music_player import music_player
-from calculator import calculate
-from weather import weather
-from movies import info
-from jokes import jokes
+from functions.music_player import music_player
+from functions.calculator import calculate
+from functions.weather import weather
+from functions.movies import info
+from functions.jokes import jokes
 
 def greet_user():
     name = input("Hello there i am Bob, your personal basic assistant, What may I call you?: ")
