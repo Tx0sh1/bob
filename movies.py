@@ -3,30 +3,36 @@ import requests
 def get_movie_info(title):
     base_url = "http://www.omdbapi.com/"
     params = {
-        'apikey': 'YOUR API KEY HERE',
+        'apikey': '32479d28', 
         't': title,
-        'plot': 'short',
-        'type': 'movie'
+        'plot': 'short',  
+        'type': 'movie' 
     }
 
     response = requests.get(base_url, params=params)
-    data = response.json()
 
-    if data['Response'] == 'True':
-        return data  # Movie information found
+    # Check for valid response
+    if response.status_code == 200:
+        data = response.json()
+        if data['Response'] == 'True':
+            return data  
+        else:
+            return None 
     else:
-        return None  # Movie not found
-
+        print("Error fetching data from OMDb API.")
+        return None  
 
 def info():
-    title = input("Enter movie name: ")  # Store user input in a variable
-    movie_data = get_movie_info(title)
+    while True:
+        title = input("Enter movie name (or 'exit' to quit): ")
+        if title.lower() == 'exit':
+            break
 
-    if movie_data:
-        print(f"Title: {movie_data['Title']}")  # Use f-strings for cleaner output
-        print(f"Year: {movie_data['Year']}")
-        print(f"Plot: {movie_data['Plot']}")
-    else:
-        print(f"Movie '{title}' not found.")  # Inform user if movie isn't found
+        movie_data = get_movie_info(title)
 
-
+        if movie_data:
+            print(f"Title: {movie_data['Title']}")  
+            print(f"Year: {movie_data['Year']}")
+            print(f"Plot: {movie_data['Plot']}")
+        else:
+            print(f"Movie '{title}' not found.") 

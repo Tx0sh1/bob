@@ -21,7 +21,7 @@ def main():
             music_player()
         elif command == "calculate":
             calculate()
-        elif command == "movie" or "movies":
+        elif command == "movie":
             info()
         elif command == "weather":
             weather()

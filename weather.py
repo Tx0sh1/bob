@@ -2,7 +2,7 @@ import requests
 
 def weather():
     # Replace with your actual API key
-    API_KEY = "YOUR API KEY HERE"  
+    API_KEY = "5dabaa0343ffb35b0f92941df323a7ea"  
 
     # Replace with correct coordinates for Mokopane
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={-23.9050}&lon={29.4603}&appid={API_KEY}&units=metric" 
