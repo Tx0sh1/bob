@@ -4,8 +4,13 @@ def music_player():
     pygame.init()
     pygame.mixer.init()
 
-    def load_song():
-        pygame.mixer.music.load('FILE PATH')
+    music_file = input("Enter the file location: ")
+
+    try:
+        pygame.mixer.music.load(music_file)
+    except pygame.error:
+        print(f"Error: Could not load music file '{music_file}'.")
+        return
 
     def play_song():
         pygame.mixer.music.play()
@@ -20,14 +25,14 @@ def music_player():
         pygame.mixer.music.stop()
 
     while True:
-        buttons = input("Type in: Play/Pause/Rewind/Stop: ").lower()
-        load_song()
-        if buttons == "play":
+        action = input("Type in: Play/Pause/Rewind/Stop: ").lower()
+        
+        if action == "play":
             play_song()
-        elif buttons == "pause":
+        elif action == "pause":
             pause()
-        elif buttons == "rewind":
+        elif action == "rewind":
             rewind()
-        elif buttons == "stop":
+        elif action == "stop":
             stop()
             break
