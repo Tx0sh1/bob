@@ -3,7 +3,7 @@ import requests
 def get_movie_info(title):
     base_url = "http://www.omdbapi.com/"
     params = {
-        'apikey': '32479d28', 
+        'apikey': 'YOUR API HERE', 
         't': title,
         'plot': 'short',  
         'type': 'movie' 
