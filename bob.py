@@ -3,6 +3,7 @@ from music_player import music_player
 from calculator import calculate
 from weather import weather
 from movies import info
+from jokes import jokes
 
 def greet_user():
     name = input("Hello there i am Bob, your personal basic assistant, What may I call you?: ")
@@ -19,6 +20,8 @@ def main():
             print(f"Current time: {get_current_time()}")
         elif command == "music":
             music_player()
+        elif command == "jokes":
+            jokes()
         elif command == "calculate":
             calculate()
         elif command == "movie":
