@@ -4,6 +4,7 @@ from functions.calculator import calculate
 from functions.weather import weather
 from functions.movies import info
 from functions.jokes import jokes
+from functions.downloader import downloader
 
 def greet_user():
     name = input("Hello there i am Bob, your personal basic assistant, What may I call you?: ")
@@ -22,6 +23,8 @@ def main():
             music_player()
         elif command == "jokes":
             jokes()
+        elif command == "download":
+            downloader()
         elif command == "calculate":
             calculate()
         elif command == "movie":
